@@ -1,5 +1,5 @@
-// Cambiado para usar el servidor de SomEE
-const BASE_URL = 'http://UtmMarket.somee.com/api';
+// Cambiado a HTTPS para evitar errores de Mixed Content en GitHub Pages
+const BASE_URL = 'https://UtmMarket.somee.com/api';
 
 export const request = async (endpoint, options = {}) => {
   const { body, ...customConfig } = options;
