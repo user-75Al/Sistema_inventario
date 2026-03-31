@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import ProductsPage from './pages/ProductsPage';
 import InventoryPage from './pages/InventoryPage';
 import CustomersManagementPage from './pages/CustomersManagementPage';
@@ -10,7 +10,7 @@ import './styles/global.css';
 
 function App() {
   return (
-    <Router basename="/Sistema_inventario">
+    <Router>
       <div className="plasma-bg">
         <Plasma 
           color="#ff6b35"
