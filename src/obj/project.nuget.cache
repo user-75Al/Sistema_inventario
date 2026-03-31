@@ -1,0 +1,60 @@
+{
+  "version": 2,
+  "dgSpecHash": "RzL4da3SXg0=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ales\\Documents\\home\\UtmMarket\\src\\UtmMarket.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ales\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
+    "C:\\Users\\ales\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
+    "C:\\Users\\ales\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
+    "C:\\Users\\ales\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.0-preview.1.25120.3\\microsoft.aspnetcore.openapi.10.0.0-preview.1.25120.3.nupkg.sha512",
+    "C:\\Users\\ales\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
+    "C:\\Users\\ales\\.nuget\\packages\\microsoft.bcl.cryptography\\9.0.0\\microsoft.bcl.cryptography.9.0.0.nupkg.sha512",
+    "C:\\Users\\ales\\.nuget\\packages\\microsoft.data.sqlclient\\6.0.0\\microsoft.data.sqlclient.6.0.0.nupkg.sha512",
+    "C:\\Users\\ales\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\6.0.1\\microsoft.data.sqlclient.sni.runtime.6.0.1.nupkg.sha512",
+    "C:\\Users\\ales\\.nuget\\packages\\microsoft.extensions.configuration.usersecrets\\10.0.0\\microsoft.extensions.configuration.usersecrets.10.0.0.nupkg.sha512",
+    "C:\\Users\\ales\\.nuget\\packages\\microsoft.extensions.hosting\\10.0.0\\microsoft.extensions.hosting.10.0.0.nupkg.sha512",
+    "C:\\Users\\ales\\.nuget\\packages\\microsoft.identity.client\\4.61.3\\microsoft.identity.client.4.61.3.nupkg.sha512",
+    "C:\\Users\\ales\\.nuget\\packages\\microsoft.identity.client.extensions.msal\\4.61.3\\microsoft.identity.client.extensions.msal.4.61.3.nupkg.sha512",
+    "C:\\Users\\ales\\.nuget\\packages\\microsoft.identitymodel.abstractions\\7.5.0\\microsoft.identitymodel.abstractions.7.5.0.nupkg.sha512",
+    "C:\\Users\\ales\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\7.5.0\\microsoft.identitymodel.jsonwebtokens.7.5.0.nupkg.sha512",
+    "C:\\Users\\ales\\.nuget\\packages\\microsoft.identitymodel.logging\\7.5.0\\microsoft.identitymodel.logging.7.5.0.nupkg.sha512",
+    "C:\\Users\\ales\\.nuget\\packages\\microsoft.identitymodel.protocols\\7.5.0\\microsoft.identitymodel.protocols.7.5.0.nupkg.sha512",
+    "C:\\Users\\ales\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\7.5.0\\microsoft.identitymodel.protocols.openidconnect.7.5.0.nupkg.sha512",
+    "C:\\Users\\ales\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.5.0\\microsoft.identitymodel.tokens.7.5.0.nupkg.sha512",
+    "C:\\Users\\ales\\.nuget\\packages\\microsoft.openapi\\2.0.0-preview5\\microsoft.openapi.2.0.0-preview5.nupkg.sha512",
+    "C:\\Users\\ales\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
+    "C:\\Users\\ales\\.nuget\\packages\\system.clientmodel\\1.0.0\\system.clientmodel.1.0.0.nupkg.sha512",
+    "C:\\Users\\ales\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.0\\system.configuration.configurationmanager.9.0.0.nupkg.sha512",
+    "C:\\Users\\ales\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.5.0\\system.identitymodel.tokens.jwt.7.5.0.nupkg.sha512",
+    "C:\\Users\\ales\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
+    "C:\\Users\\ales\\.nuget\\packages\\system.security.cryptography.pkcs\\9.0.0\\system.security.cryptography.pkcs.9.0.0.nupkg.sha512",
+    "C:\\Users\\ales\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.0\\system.security.cryptography.protecteddata.9.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1510",
+      "level": "Warning",
+      "message": "PackageReference Microsoft.Extensions.Hosting no se eliminará. Considere la posibilidad de quitar este paquete de las dependencias, ya que es probable que no sea necesario.",
+      "projectPath": "C:\\Users\\ales\\Documents\\home\\UtmMarket\\src\\UtmMarket.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\ales\\Documents\\home\\UtmMarket\\src\\UtmMarket.csproj",
+      "libraryId": "Microsoft.Extensions.Hosting",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1510",
+      "level": "Warning",
+      "message": "PackageReference Microsoft.Extensions.Configuration.UserSecrets no se eliminará. Considere la posibilidad de quitar este paquete de las dependencias, ya que es probable que no sea necesario.",
+      "projectPath": "C:\\Users\\ales\\Documents\\home\\UtmMarket\\src\\UtmMarket.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\ales\\Documents\\home\\UtmMarket\\src\\UtmMarket.csproj",
+      "libraryId": "Microsoft.Extensions.Configuration.UserSecrets",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
+}
