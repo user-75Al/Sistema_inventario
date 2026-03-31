@@ -10,7 +10,7 @@ import './styles/global.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Sistema_inventario">
       <div className="plasma-bg">
         <Plasma 
           color="#ff6b35"
