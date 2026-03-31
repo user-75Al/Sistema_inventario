@@ -1,5 +1,6 @@
-// Cambiado a http de nuevo porque SomEE gratuito no soporta https real
+// Usamos un proxy para que GitHub Pages (https) pueda hablar con SomEE (http) sin bloqueos de seguridad
 const BASE_URL = 'http://UtmMarket.somee.com/api';
+const PROXY_URL = 'https://corsproxy.io/?';
 
 export const request = async (endpoint, options = {}) => {
   const { body, ...customConfig } = options;
@@ -22,36 +23,33 @@ export const request = async (endpoint, options = {}) => {
   }
 
   try {
-    const response = await fetch(`${BASE_URL}${endpoint}`, config);
+    // Envolvemos la petición con el proxy seguro
+    const finalUrl = `${PROXY_URL}${encodeURIComponent(BASE_URL + endpoint)}`;
+    const response = await fetch(finalUrl, config);
     
-    // Si la respuesta es exitosa pero no tiene contenido (204 No Content)
     if (response.status === 204) {
       return null;
     }
 
-    // Leemos el texto primero para verificar si está vacío
     const text = await response.text();
     let data = null;
     
     try {
       data = text ? JSON.parse(text) : null;
     } catch (e) {
-      // Si no es JSON (es HTML de error o texto plano)
-      throw new Error(`Respuesta no válida del servidor (${response.status}): ${text.substring(0, 100)}`);
+      throw new Error(`Respuesta no válida del servidor (${response.status})`);
     }
 
     if (response.ok) {
       return data;
     }
 
-    const error = new Error(data?.detail || data?.title || `Error ${response.status}: ${text}`);
+    const error = new Error(data?.detail || data?.title || `Error ${response.status}`);
     error.status = response.status;
     error.data = data;
     throw error;
   } catch (err) {
-    if (!err.status) {
-      console.error('Network Error:', err);
-    }
+    console.error('Network Error:', err);
     throw err;
   }
 };

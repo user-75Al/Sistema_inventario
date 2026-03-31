@@ -9,6 +9,10 @@ using UtmMarket.WebAPI;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Configurar el puerto para Render (toman el puerto de la variable de entorno PORT)
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
+
 // --- Configuración de Servicios ---
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -29,18 +33,15 @@ builder.Services.AddCors(options => {
 
 var app = builder.Build();
 
+// --- Configuración de Archivos Estáticos (Para React) ---
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
 // --- Manejo de Errores ---
 if (app.Environment.IsDevelopment()) {
     app.UseDeveloperExceptionPage();
 } else {
-    // En producción usamos un manejador de excepciones más limpio
-    app.UseExceptionHandler(errorApp => {
-        errorApp.Run(async context => {
-            context.Response.StatusCode = 500;
-            context.Response.ContentType = "application/json";
-            await context.Response.WriteAsync("{\"error\": \"Error interno del servidor en SomEE.\"}");
-        });
-    });
+    app.UseExceptionHandler("/error");
 }
 
 app.UseCors();
@@ -56,4 +57,8 @@ using (var scope = app.Services.CreateScope()) {
 }
 
 app.MapControllers();
+
+// --- Ruta para que React maneje el Navegador ---
+app.MapFallbackToFile("index.html");
+
 app.Run();
